@@ -13,31 +13,26 @@ def softmax(x):
 # Input
 x = np.linspace(-5, 5, 100)
 
-# Softmax uses positive values
-x_soft = np.linspace(1, 10, 100)
-y_soft = softmax(x_soft)
-
-# Plot
+# Plot all activation functions
 plt.figure(figsize=(12, 6))
 
 plt.subplot(2, 3, 1)
-plt.plot(x, sigmoid(x))
-plt.title("Sigmoid"); plt.grid(True)
+plt.plot(x, sigmoid(x)); plt.title("Sigmoid"); plt.grid(True)
 
 plt.subplot(2, 3, 2)
-plt.plot(x, tanh(x))
-plt.title("Tanh"); plt.grid(True)
+plt.plot(x, tanh(x)); plt.title("Tanh"); plt.grid(True)
 
 plt.subplot(2, 3, 3)
-plt.plot(x, relu(x))
-plt.title("ReLU"); plt.grid(True)
+plt.plot(x, relu(x)); plt.title("ReLU"); plt.grid(True)
 
 plt.subplot(2, 3, 4)
-plt.plot(x, leaky(x))
-plt.title("Leaky ReLU"); plt.grid(True)
+plt.plot(x, leaky(x)); plt.title("Leaky ReLU"); plt.grid(True)
 
+# Softmax (bar plot)
+x_soft = np.array([1, 2, 3, 4, 5])
+y_soft = softmax(x_soft)
 plt.subplot(2, 3, 5)
-plt.plot(x_soft, y_soft)
+plt.bar(range(len(y_soft)), y_soft)
 plt.title("Softmax"); plt.grid(True)
 
 plt.tight_layout()

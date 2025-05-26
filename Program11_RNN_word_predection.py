@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Step 1: Sample training data
 text = [
-    'i love to eat oranges',
+    'i love to eat apples',
     'she loves to eat oranges',
     'he like to eat guava'
 ]

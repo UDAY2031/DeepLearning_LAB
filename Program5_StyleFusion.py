@@ -13,8 +13,8 @@ style = load_img('s.png')
 style = tf.image.resize(style, content.shape[1:3])
 
 model = hub.load("https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2")
-s = model(content, style)[0]
+s = model(content, style)[0][0]
 
-plt.imshow(s[0])
+plt.imshow(s)
 plt.axis('off')
 plt.show()
